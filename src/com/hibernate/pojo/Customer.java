@@ -19,7 +19,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Table(name = "customer")
-@Cache(region = "cache_two",usage = CacheConcurrencyStrategy.READ_WRITE)
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @NamedQuery(query = "select c.customerName from Customer c",name = "findCustomerNames")
 public class Customer implements Serializable{   
     
